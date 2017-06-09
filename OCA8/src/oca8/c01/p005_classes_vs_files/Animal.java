@@ -4,17 +4,20 @@
  * and open the template in the editor.
  */
 
-package oca8.c01.creating_new_package.b;
-
-import oca8.c01.creating_new_package.a.ClassA;
+package oca8.c01.p005_classes_vs_files;
 
 /**
  *
  * @author fabio.moreno.dlbi
  */
-public class ClassB {
-    public static void main(String[] args) {
-        ClassA a;
-        System.out.println("Got it");
-    }
+public class Animal {
+    
+}
+
+class Animal2{
+    
+}
+
+/*public -> the file should be named as Animal3.java*/ class Animal3{
+    
 }

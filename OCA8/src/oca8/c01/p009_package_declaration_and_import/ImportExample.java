@@ -4,15 +4,17 @@
  * and open the template in the editor.
  */
 
-package oca8.c01.writting_main_method;
+package oca8.c01.p009_package_declaration_and_import;
+
+import java.util.Random; // import tells us where to find Random
 
 /**
  *
  * @author fabio.moreno.dlbi
  */
-public class Zoo {
+public class ImportExample {
     public static void main(String[] args) {
-        System.out.println(args[0]);
-        System.out.println(args[1]); 
+        Random r = new Random(); // DOES NOT COMPILE without import java.util.Random;
+        System.out.println(r.nextInt(10));
     }
 }

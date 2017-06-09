@@ -1,0 +1,77 @@
+You’ll learn Java much more easily by using the command line to compile and test
+your examples. Once you know the Java syntax well, you can switch to an integrated
+development environment (IDE) like Eclipse. An IDE will save you time in coding. But
+for the exam, your goal is to know details about the language and not have the IDE hide
+them for you.
+
+Follow this example to make sure you know how to use the command line. If you have
+any problems following this procedure, post a question in the Beginning Java forum at
+CodeRanch (www.coderanch.com/forums/f-33/java). Describe what you tried and what
+the error said.
+
+Windows Setup
+
+Create the two files:
+
+■ C:\temp\packagea\ClassA.java
+■ C:\temp\packageb\ClassB.java
+
+Then type this command:
+
+cd C:\temp
+
+Mac/Linux Setup
+
+Create the two files:
+
+■ /tmp/packagea/ClassA.java
+■ /tmp/packageb/ClassB.java
+
+Then type this command:
+
+cd /tmp
+
+To Compile
+
+Type this command:
+
+javac packagea/ClassA.java packageb/ClassB.java
+
+If this command doesn’t work, you’ll get an error message. Check your files carefully for
+typos against the provided files. If the command does work, two new files will be created:
+
+packagea/ClassA.class and packageb/ClassB.class.
+
+To Run
+Type this command:
+
+java packageb.ClassB
+
+If it works, you’ll see Got it printed. You might have noticed we typed ClassB rather than
+ClassB.class. In Java you don’t pass the extension when running a program.
+
+Class Paths and JARs
+You can also specify the location of the other files explicitly using a class path. This technique
+is useful when the class files are located elsewhere or in special JAR files. A JAR
+file is like a zip file of mainly Java class files. This goes beyond what you’ll need to do on
+version 8 of the exam, although it appears on older versions.
+
+On Windows, you type the following:
+
+java -cp ".;C:\temp\someOtherLocation;c:\temp\myJar.jar" myPackage.MyClass
+
+And on Mac OS/Linux, you type this:
+
+java -cp ".:/tmp/someOtherLocation:/tmp/myJar.jar" myPackage.MyClass
+
+The dot indicates you want to include the current directory in the class path. The rest of
+the command says to look for loose class files (or packages) in someOtherLocation and
+within myJar.jar. Windows uses semicolons to separate parts of the class path; other
+operating systems use colons.
+
+Finally, you can use a wildcard (*) to match all the JARs in a directory. Here’s an example:
+
+java -cp "C:\temp\directoryWithJars\*" myPackage.MyClass
+
+This command will add all the JARs to the class path that are in directoryWithJars. It
+won’t include any JARs in the class path that are in a subdirectory of directoryWithJars.

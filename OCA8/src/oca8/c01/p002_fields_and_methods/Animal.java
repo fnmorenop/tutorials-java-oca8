@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package oca8.c01.fields_and_methods;
+package oca8.c01.p002_fields_and_methods;
 
 /**
  *

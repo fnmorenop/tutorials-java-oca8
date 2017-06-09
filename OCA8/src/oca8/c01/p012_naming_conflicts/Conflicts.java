@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package oca8.c01.naming_conflicts;
+package oca8.c01.p012_naming_conflicts;
 
  
 // import java.util.*;

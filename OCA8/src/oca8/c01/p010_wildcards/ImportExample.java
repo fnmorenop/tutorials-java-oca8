@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package oca8.c01.wildcards;
+package oca8.c01.p010_wildcards;
 
 import java.util.*; // imports java.util.Random among other things
 /**

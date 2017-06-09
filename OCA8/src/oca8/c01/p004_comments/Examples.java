@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package oca8.c01.comments;
+package oca8.c01.p004_comments;
 
 /**
  *

@@ -4,17 +4,17 @@
  * and open the template in the editor.
  */
 
-package oca8.c01.package_declaration_and_import;
+package oca8.c01.p013_creating_new_package.b;
 
-import java.util.Random; // import tells us where to find Random
+import oca8.c01.p013_creating_new_package.a.ClassA;
 
 /**
  *
  * @author fabio.moreno.dlbi
  */
-public class ImportExample {
+public class ClassB {
     public static void main(String[] args) {
-        Random r = new Random(); // DOES NOT COMPILE without import java.util.Random;
-        System.out.println(r.nextInt(10));
+        ClassA a;
+        System.out.println("Got it");
     }
 }

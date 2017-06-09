@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package oca8.c01.classes_vs_files;
+package oca8.c01.p013_creating_new_package.a;
 
 /**
  *
  * @author fabio.moreno.dlbi
  */
-class AnimalDefault {
+public class ClassA {
     
 }

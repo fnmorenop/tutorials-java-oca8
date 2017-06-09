@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package oca8.c01.redundant_imports;
+package oca8.c01.p011_redundant_imports;
 
 import java.nio.file.*;
 /** 
