@@ -43,7 +43,7 @@ public class P044_07_ClassImport {
      * F. None of these imports can make the code compile.
      */
     /**
-     * A. B. C. D. E.
+     * A. B. C.
      */
     public static void main(String[] args) {
         WaterFiller wf = new WaterFiller();

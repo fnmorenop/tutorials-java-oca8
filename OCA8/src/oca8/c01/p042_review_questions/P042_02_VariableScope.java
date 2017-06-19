@@ -31,8 +31,7 @@ public class P042_02_VariableScope {
      * F. Empty = null, Brand = null
      */
     /**
-     * A. x
-     * C.
+     * D.
      */
     private String brand;
     private boolean empty;
