@@ -20,7 +20,7 @@ than the additive operators (+, -). That means when you see an expression such a
 * 
 int x = 2 * 5 + 3 * 4 - 8;
 * 
-you fi rst evaluate the 2 * 5 and 3 * 4, which reduces the expression to the following:
+you first evaluate the 2 * 5 and 3 * 4, which reduces the expression to the following:
 * 
 int x = 10 + 12 - 8;
 * 
@@ -51,6 +51,12 @@ the sections you want evaluated first
             String mensaje = ((y1 == y2) && (y2 == y3) && (y3 == y4) && (y4 == y5))
                     ? "Everyone is equal to 48" : "Something wrong happened";
             System.out.printf("%n mensaje = %s%n", mensaje);
+        }
+        {
+            int multiplicationDivisionPrecedence = 6 / 2 * (1 + 2); // 9
+//            multiplicationDivisionPrecedence = (6 / 2) * (1 + 2);
+            System.out.printf("%n multiplicationDivisionPrecedence = %d%n", 
+                    multiplicationDivisionPrecedence);
         }
         /*
 All of the arithmetic operators may be applied to any Java primitives, except boolean
