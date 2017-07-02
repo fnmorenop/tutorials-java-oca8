@@ -45,5 +45,65 @@ are false. Since we know the left-hand side is true, there’s no need to evalua
 side, since no value of y will ever make the value of x anything other than true. It may help
 you to illustrate this concept by executing the previous line of code for various values of y.
  */
+        {
+            message = "---- LOGICAL OPERATORS ----";
+            System.out.printf("%n %50s%n", message);
+            
+            int y;
+            boolean x = true || (y < 4);
+            System.out.printf("%n int y;%n boolean x = true || (y < 4);%n x = %b%n", x);
+        }
+        
+/**
+A more common example of where short-circuit operators are used is checking for null
+objects before performing an operation, such as this:
+
+if(x != null && x.getValue() < 5) {
+    // Do something
+}
+
+In this example, if x was null, then the short-circuit prevents a NullPointerException
+from ever being thrown, since the evaluation of x.getValue() < 5 is never reached.
+Alternatively, if we used a logical &, then both sides would always be evaluated and when x
+was null this would throw an exception:
+
+if(x != null & x.getValue() < 5) { // Throws an exception if x is null
+// Do something
+}
+ */
+        {
+            message = "---- SHORT CIRCUIT OPERATORS ----";
+            System.out.printf("%n %50s%n", message);
+            
+            Integer x = null;
+
+//            if (x != null & x < 5) { // NULL POINTER EXCEPTION
+            if (x != null && x < 5) { // SHORT CIRCUIT PREVENTS NULL POINTER
+                System.out.printf("%n x = %,d%n", x);
+            } else {
+                System.out.println("x == null");
+            }
+        }
+/**
+Be wary of short-circuit behavior on the exam, as questions are known to alter a variable
+on the right-hand side of the expression that may never be reached. For example, what
+is the output of the following code?
+
+int x = 6;
+boolean y = (x >= 6) || (++x <= 7);
+System.out.println(x);
+
+Because x >= 6 is true, the increment operator on the right-hand side of the expression
+is never evaluated, so the output is 6.
+ */
+        {
+            message = "---- NEVER REACHED EXPRESSION ----";
+            System.out.printf("%n %50s%n", message);
+            
+            int x = 6;
+            boolean y = (x >= 6) || (++x <= 7);
+            System.out.printf("%n y = %b%n", y);
+            System.out.printf(" x = %,d%n", x);
+        }
     }
 }
