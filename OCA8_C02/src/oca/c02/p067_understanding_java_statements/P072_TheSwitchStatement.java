@@ -14,7 +14,11 @@ public class P072_TheSwitchStatement {
         String message;
         
 /**
-
+A switch statement, as shown in Figure 2.4, is a complex decision-making structure
+in which a single value is evaluated and flow is redirected to the first matching branch,
+known as a case statement. If no such case statement is found that matches the value, an
+optional default statement will be called. If no such default option is available, the entire
+switch statement will be skipped.
  */
     }
 }
