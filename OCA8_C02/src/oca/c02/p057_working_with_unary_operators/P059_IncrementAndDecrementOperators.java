@@ -16,14 +16,42 @@ public class P059_IncrementAndDecrementOperators {
 Increment and decrement operators, ++ and --, respectively, can be applied to numeric
 operands and have the higher order or precedence, as compared to binary operators. In
 other words, they often get applied first to an expression.
+
 Increment and decrement operators require special care because the order they are
 applied to their associated operand can make a difference in how an expression is processed.
+
 If the operator is placed before the operand, referred to as the pre-increment operator
 and the pre-decrement operator, then the operator is applied first and the value return
 is the new value of the expression. Alternatively, if the operator is placed after the operand,
 referred to as the post-increment operator and the post-decrement operator, then the original
 value of the expression is returned, with operator applied after the value is returned.
-
+*/ 
+        {
+            message = "---- UNARY OPERATORS - BASIC PRECEDENCE ----";
+            System.out.printf("%n %50s%n", message);
+            
+            int initialValue = 10;
+            System.out.printf("%n initialValue = %s%n", initialValue);
+            int preIncrementValue = ++initialValue;
+            System.out.printf("%n preIncrementValue = %s%n", preIncrementValue);
+            System.out.printf("%n initialValue = %s%n", initialValue);
+            int preIncrementAssignationValue = (initialValue += 1);
+            System.out.printf("%n preIncrementAssignationValue = %s%n", preIncrementAssignationValue);
+            System.out.printf("%n initialValue = %s%n", initialValue);
+            int preDecrementValue = --initialValue;
+            System.out.printf("%n preDecrementValue = %s%n", preDecrementValue);
+            System.out.printf("%n initialValue = %s%n", initialValue);
+            int preDecrementAssignationValue = (initialValue -= 1);
+            System.out.printf("%n preDecrementAssignationValue = %s%n", preDecrementAssignationValue);
+            System.out.printf("%n initialValue = %s%n", initialValue);
+            
+            int postIncrementValue = initialValue++;
+            System.out.printf("%n postIncrementValue = %s%n", postIncrementValue);
+            System.out.printf("%n initialValue = %s%n", initialValue);
+            
+            int postIncrementAssignationValue = initialValue; initialValue += 1;
+        }
+/**
 The following code snippet illustrates this distinction:
 
 int counter = 0;

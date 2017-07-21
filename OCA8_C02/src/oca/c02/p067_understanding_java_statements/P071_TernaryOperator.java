@@ -47,6 +47,119 @@ if(y > 5) {
             }
             System.out.printf(" x = %d%n", x);
         }
+        
+        {
+            message = "---- TERNARY OPERATOR - DEEPING ----";
+            System.out.printf("%n %50s%n", message);
+            
+            boolean isTrue = true;
+            System.out.printf("%n isTrue = %s%n", isTrue);
+            int deepingTernaryValue = 
+                    isTrue ?
+                        isTrue ?
+                            isTrue ?
+                                isTrue ?
+                                    isTrue ?
+                                        isTrue ?
+                                            isTrue ?
+                                                isTrue ?
+                                                    !isTrue ?
+                                                        isTrue ?
+                                                            isTrue ?
+                                                                isTrue ?
+                                                                    isTrue ?
+                                                                        isTrue ?
+                                                                            isTrue ?
+                                                                                isTrue ?
+                                                                                    isTrue ?
+                                                                                        isTrue ? 
+                                                                                            18  
+                                                                                        : 0
+                                                                                    : 17
+                                                                                : 16
+                                                                            : 15
+                                                                        : 14
+                                                                    : 13
+                                                                : 12
+                                                            : 11
+                                                        : 10
+                                                    : 9
+                                                : 8
+                                            : 7
+                                        : 6
+                                    : 5
+                                : 4
+                            : 3
+                        : 2
+                    : 1;
+            System.out.printf(" deepingTernaryValue = %s%n", deepingTernaryValue);
+            
+            boolean isTernaryExpression;
+            
+            {
+                String usabilityTernaryValue1 = 
+                        false ?
+                            true ?
+                                true ? 
+                                    "Level 4" : 
+                                "Level 3" : 
+                            "Level 2" : 
+                        "Level 1";
+                System.out.printf(" usabilityTernaryValue1 = %s%n", usabilityTernaryValue1);
+            }
+            
+            {
+                String usabilityTernaryValue2 = 
+                        true ?
+                            false ?
+                                true ? 
+                                    "Level 4" : 
+                                "Level 3" : 
+                            "Level 2" : 
+                        "Level 1";
+                System.out.printf(" usabilityTernaryValue2 = %s%n", usabilityTernaryValue2);
+            }
+            
+            {
+                String usabilityTernaryValue3 = 
+                        true ?
+                            true ?
+                                false ? 
+                                    "Level 4" : 
+                                "Level 3" : 
+                            "Level 2" : 
+                        "Level 1";
+                System.out.printf(" usabilityTernaryValue3 = %s%n", usabilityTernaryValue3);
+            }
+            
+            {
+                String usabilityTernaryValue4 = 
+                        true ?
+                            true ?
+                                true ? 
+                                    "Level 4" : 
+                                "Level 3" : 
+                            "Level 2" : 
+                        "Level 1";
+                System.out.printf(" usabilityTernaryValue4 = %s%n", usabilityTernaryValue4);
+            }
+            
+            {
+                boolean isBooleanOperation = 2 < 2 && 3 < 4 ^ 5 < 6 && 7 < 8;
+                System.out.printf(" isBooleanOperation = %s%n", isBooleanOperation);
+                boolean isXorOperation = 2 < 2;
+                System.out.printf(" isXorOperation = %s%n", isXorOperation);
+                String usabilityTernaryValueX = 
+                        1 < 2 && 4 < 4 ^ 5 < 6 && 7 < 8 ?
+                            8 != 9 | 10 != 11 ?
+                                2 != 2.5D ? 
+                                    "Level 4" : 
+                                "Level 3" : 
+                            "Level 2" : 
+                        "Level 1";
+                System.out.printf(" usabilityTernaryValueX = %s%n", usabilityTernaryValueX);
+            }
+        }
 /**
 Compare the previous code snippet with the following equivalent ternary operator code
 snippet:

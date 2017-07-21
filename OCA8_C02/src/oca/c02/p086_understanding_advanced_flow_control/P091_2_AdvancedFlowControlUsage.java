@@ -16,6 +16,7 @@ public class P091_2_AdvancedFlowControlUsage {
         boolean isShowIfStatement = false;
         boolean isShowWhileStatement = false;
         boolean isShowForStatement = false;
+        boolean isShowSwitchStatement = false;
         
 //        isShowForStatement = true;
         IF_STATEMENT_BLOCK:
@@ -127,9 +128,9 @@ public class P091_2_AdvancedFlowControlUsage {
                 
                 if (true) {
 //                    break BLOCK_OUTTER_WHILE; // CONTINUES OUTTER_WHILE_BLOCK
-//                    break OUTTER_WHILE_BLOCK; // BREAKS OUTTER_WHILE_BLOCK - UNNECESARY LABEL
+//                    break OUTTER_WHILE_BLOCK; // BREAKS OUTTER_WHILE_BLOCK - UNNECESSARY LABEL
 //                    break; // EXITS OUTTER_WHILE_BLOCK
-//                    continue OUTTER_WHILE_BLOCK; // CONTINUES OUTTER_WHILE_BLOCK - UNNECESARY LABEL
+//                    continue OUTTER_WHILE_BLOCK; // CONTINUES OUTTER_WHILE_BLOCK - UNNECESSARY LABEL
 //                    continue; // CONTINUES OUTTER_WHILE_BLOCK
                 }
                 
@@ -140,10 +141,10 @@ public class P091_2_AdvancedFlowControlUsage {
                     if (true) {
 //                        break BLOCK_OUTTER_WHILE; // CONTINUES OUTTER_WHILE_BLOCK
 //                        break OUTTER_WHILE_BLOCK; // BREAKS OUTTER_WHILE_BLOCK
-//                        break INNER_WHILE_BLOCK; // BREAKS OUTTER_WHILE_BLOCK - UNNECESARY LABEL
+//                        break INNER_WHILE_BLOCK; // BREAKS OUTTER_WHILE_BLOCK - UNNECESSARY LABEL
 //                        break; // BREAKS OUTTER_WHILE_BLOCK
 //                        continue OUTTER_WHILE_BLOCK; // CONTINUES OUTTER_WHILE_BLOCK
-//                        continue INNER_WHILE_BLOCK; // CONTINUES INNER_WHILE_BLOCK - UNNECESARY LABEL
+//                        continue INNER_WHILE_BLOCK; // CONTINUES INNER_WHILE_BLOCK - UNNECESSARY LABEL
 //                        continue; // CONTINUES INNER_WHILE_BLOCK
                     }
                     
@@ -166,7 +167,7 @@ public class P091_2_AdvancedFlowControlUsage {
             System.out.printf(" outterControl = %s%n", outterControl);
         }
         
-        isShowForStatement = true;
+//        isShowForStatement = true;
         FOR_STATEMENT_BLOCK: {
             if (!isShowForStatement) {
                 message = "---- SKIPPED: ADVANCED FLOW CONTROL USAGE - FOR ----";
@@ -184,10 +185,63 @@ public class P091_2_AdvancedFlowControlUsage {
                     
                     if (true) {
                         
+                        System.out.println("\n IF STATEMENT: Starting");
+                        
+//                        break OUTTER_FOR_BLOCK; // CONTINUES OUTTER_FOR_BLOCK
+//                        break OUTTER_FOR_STATEMENT; // BREAKS OUTTER_FOR_STATEMENT -- UNNECESSARY LABEL 
+//                        break; // BREAKS OUTTER_FOR_STATEMENT
+//                        continue OUTTER_FOR_BLOCK; // DOESN'T COMPILE - OUTTER_FOR_BLOCK NOT LOOP LABEL
+//                        continue OUTTER_FOR_STATEMENT; // CONTINUES OUTTER_FOR_STATEMENT - UNNECESARY LABEL
+//                        continue; // CONTINUES OUTTER_FOR_STATEMENT   
+                        
+                        System.out.println("\n IF STATEMENT: Ending"); // UNREACHABLE STATEMENT
                     }
                     
                     System.out.println("\n OUTTER_FOR_STATEMENT: Ending");
                 }
+        }
+        
+        isShowSwitchStatement = true;
+        FOR_STATEMENT_BLOCK: {
+            if (!isShowSwitchStatement) {
+                message = "---- SKIPPED: ADVANCED FLOW CONTROL USAGE - SWITCH ----";
+                System.out.printf("%n %50s%n", message);
+                break FOR_STATEMENT_BLOCK;
+            } else {
+                message = "---- ADVANCED FLOW CONTROL USAGE - SWITCH ----";
+                System.out.printf("%n %50s%n", message);
+            }
+            
+            Character outerSwitchVariable = 'a';
+            
+            
+            System.out.println("\n OUTTER_SWITCH_STATEMENT: Start");
+            OUTTER_SWITCH_STATEMENT :
+            switch(outerSwitchVariable){
+                case 'a' : CASE_A_BLOCK : {
+                    System.out.println("\n CASE_A_BLOCK: Starting");
+                    
+                    System.out.println("\n CASE_A_BLOCK: Ending"); 
+                }
+                case 'b' : CASE_B_BLOCK : {
+                    System.out.println("\n CASE_B_BLOCK: Starting");
+                    
+//                    break OUTTER_SWITCH_STATEMENT; // BREAKS OUTTER_SWITCH_STATEMENT - UNNECESARY LABEL
+//                    break CASE_B_BLOCK; // BREAKS CASE_A_BLOCK
+//                    break; // BREAKS CASE_B_BLOCK
+//                    continue OUTTER_SWITCH_STATEMENT; // DOESN'T COMPILE - OUTTER_SWITCH_STATEMENT NOT LOOP LABEL
+//                    continue CASE_B_BLOCK; // DOESN'T COMPILE - CASE_B_BLOCK - NOT LOOP LABEL
+//                    continue; // DOESN'T COMPILE - CONTINUES OUTSIDE LOOP BLOCK 
+                    
+//                    System.out.println("\n CASE_B_BLOCK: Ending"); 
+                }
+                default : CASE_DEFAULT : {
+                    System.out.println("\n CASE_DEFAULT: Starting");
+                    
+                    System.out.println("\n CASE_DEFAULT: Ending");
+                }
+            }
+            System.out.println("\n OUTTER_SWITCH_STATEMENT: End");
         }
     }
 }
