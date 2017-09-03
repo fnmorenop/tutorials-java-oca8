@@ -28,7 +28,7 @@ F. The code will not compile because of line 7.
  */
     
 /**
- * E. --> F
+ * E.
  */
     public static void main(String[] args) {
         

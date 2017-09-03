@@ -13,7 +13,7 @@ public class P060_AssignmentOperators {
     public static void main(String[] args) {
         String message;
 /**
-An assignment operator is a binary operator that modifies, or assigns, the variable on
+An assignment operator is a binary operator that modifi es, or assigns, the variable on
 the left-hand side of the operator, with the result of the value on the right-hand side of
 the equation. The simplest assignment operator is the = assignment, which you have seen
 already:

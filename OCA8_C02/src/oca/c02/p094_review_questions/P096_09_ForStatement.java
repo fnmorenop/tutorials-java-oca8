@@ -28,7 +28,7 @@ F. The code contains an infinite loop and does not terminate.
  */
         
 /**
- * A. --> F.
+ * A.
  */
         {
             int initialValue = 10;
